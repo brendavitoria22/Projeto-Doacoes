@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #9e2a2b;;
+    padding: 10px 20;
+}
+
+.lado-esquerdo-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    
+}
+
+.lado-esquerdo-cabecalho figure img {
+    width: 80px;
+}
+
+
+.lado-esquerdo-cabecalho div:hover{
+    cursor: pointer;
+    user-select: none;
+    
+}
+
+
+.lado-direito-cabecalho a {
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(255, 250, 250);
+    text-decoration: none;
+    transition: transform 0.3s; 
+    display: inline-block; 
+    font-family: 'Libre Baskerville', serif;
+}
+.lado-direito-cabecalho a:hover {
+    transform: scale(1.3); /* Aumenta a escala do link em 10% quando o mouse está sobre ele */
+    color: #ffd670;
+}
+
+.lado-direito-cabecalho {
+    display: flex;
+    justify-content: flex-end; /* Alinha o conteúdo para o lado direito */
+    font-size: 21px;
+    
+    gap: 34px;
+}
+
+.lado-direito-cabecalho ul {
+    display: flex; /* Torna a lista um contêiner flexível */
+    list-style-type: none; /* Remove os pontos ao lado das listas */
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.lado-direito-cabecalho li {
+    margin-left: 60px; /* Adiciona um espaçamento entre os itens da lista */
+   
+}
+.lado-direito-cabecalho li:last-child {
+    margin-right: 75px; /* Adiciona espaço à esquerda do último item da lista */
+}
+
+.search-container {
+    width: 700px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    align-items: center;
+    display: flex;
+   
+}
+
+input#search-bar {
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #f1efed;
+    outline: none;
+    border-radius: 50px;
+   
+}
+
+.search-icon {
+    height: 70px;
+    margin-left: 0px;
+}
+
+/*--------------parte do banner------------------------*/
+
+.banner {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center; /* Adiciona alinhamento central */
+    margin: 0 auto;
+}
+
+.slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    transition: transform 0.2s ease;
+    justify-content: center; 
+}
+
+.slides li {
+    flex: 0 0 auto;
+}
+
+.slides img {
+    width: 105%;
+    text-align: center;
+    height: auto;
+    border: 4px solid #e4e3e1; 
+    border-radius:40px; /* Adiciona cantos arredondados */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.banner .slides li:not(.active) {
+    display: none;
+}
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.slide-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slide-indicator.active {
+    background-color: #9e2a2b;
+}
+/*----------------------------------sobre nos-------------------------------*/
+
+
+.section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center; /* Centralizando o texto horizontalmente */
+    
+}
+
+.section div h2 {
+    margin-left: 10px; /* Adicionando margem para separar a imagem do texto */
+}
+
+
+
+
+.section {
+    background-color: #9e2a2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: transform 0.3s ease; /* Adicionando transição para a escala */
+    border-radius: 30px;
+  
+}
+
+
+.section:hover {
+    transform: scale(0.95);
+}
+.section div img {
+    max-width: 200px; /* Definindo o tamanho máximo da imagem */
+    height: auto; 
+}
+
+
+.sobre,
+.sobrenos {
+    transition: transform 0.3s ease; /* Adicionando transição para a escala */
+}
+
+.sobre:hover,
+.sobrenos:hover {
+    transform: scale(0.95);
+}
+
+.sobre {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    padding: 0 80px 0 80px;
+}
+
+
+ p {
+    font-size: 28px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.5;
+    margin: 20px 0;
+    color: #000000;
+
+   
+}
+  h2{
+    font-size: 2.7em;
+    font-family:'Libre Baskerville', serif; 
+}
+
+/*--------------footer------------------------*/
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #666666;
+    color: white;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    margin-right: 290px;
+   
+}
+
+.footer-section span {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    margin-right: 290px;
+}
+
+.footer-bottom {
+    flex-basis: 100%;
+    text-align: center;
+    background-color: #7c2122;
+    padding: 15px 0;
+}
+footer h2{
+    font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
+    margin-left: 100px;
+}
