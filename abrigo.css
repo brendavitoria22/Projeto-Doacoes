@@ -305,3 +305,29 @@ footer h2{
     font-family: 'Libre Baskerville', serif;
     margin-left: 100px;
 }
+
+/* Tema Claro */
+body {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  /* Tema Escuro */
+body.dark-mode {
+    background-color: #222;
+    color: #fff;
+  }
+
+.theme-button img {
+    border-radius: 50%;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.theme-button:hover img {
+    border-radius: 50%;
+    background-color: #ffd670;
+    transform: scale(1.3);
+}
