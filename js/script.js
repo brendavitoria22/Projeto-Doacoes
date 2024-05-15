@@ -37,3 +37,33 @@ document.addEventListener("DOMContentLoaded", function() {
         indicatorsContainer.querySelectorAll('.slide-indicator')[currentSlide].classList.add('active');
     }
 });
+const toggleDarkModeButton = document.getElementById('toggleDarkMode');
+
+const isDarkMode = () => {
+  return localStorage.getItem('darkMode') === 'true';
+}
+
+/*-------------------------------------------------------- */
+
+const setDarkMode = (enabled) => {
+  localStorage.setItem('darkMode', enabled);
+  const body = document.body;
+  if (enabled) {
+    body.classList.add('dark-mode');
+    document.getElementById('botao-tema').src = 'img/Lua.png';
+  } else {
+    body.classList.remove('dark-mode');
+    document.getElementById('botao-tema').src = 'img/Sol.png';
+  }
+}
+
+toggleDarkModeButton.addEventListener('click', () => {
+  setDarkMode(!isDarkMode());
+});
+
+// Verifica e aplica o tema inicial
+if (isDarkMode()) {
+  setDarkMode(true);
+}
+
+    
