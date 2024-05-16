@@ -3,79 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-     @charset "UTF-8"; 
-        
-        body {
-        font-family: sans-serif;
-     margin: 0;
-        padding: 0;
-        }
-        
-        .caixa {
-         display: flex;
-       flex-direction: column;
-         align-items: center;
-        justify-content: center;
-         min-height: 100vh;
-        }
-        
-        form {
-         background-color: #fff;
-      padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-        }
-        
-        label {
-       display: block;
-       margin-top: 10px;
-       margin-bottom: 5px;
-        }
-        
-        input[type="text"],
-        textarea {
-        /* width: 100%; */
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-       margin-bottom: 1px;
-        }
-        
-        textarea {
-      height: 150px;
-        }
-        
-        button {
-         background-color: #4CAF50;
-         color: white;
-        padding: 10px 20px;
-       border: none;
-        border-radius: 4px;
-      cursor: pointer;
-        }
-        </style>
-    </head>
+    <title>Contato</title>
+    <link rel="stylesheet" href="formulario.css">
+      </head>
 
         <body>
-
-       <div class="caixa">
-            <h1>Formulário de Contato</h1>
-            <form action="#">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-        
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-       
-        
-                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-                    <br>
-        
-                 <button type="submit">Enviar</button>
-             </form>
+          <header>
+            <div class="lado-esquerdo-cabecalho">
+                <figure>
+                    <a href="principal.html">
+                        <img src="img/logoo.png" alt="Logo ">
+                    </a>
+                </figure>
+            </div>
+    
+            <form class="search-container">
+                <input type="text" id="search-bar" placeholder="Pesquise Aqui">
+                <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+              </form>
+    
+            <nav class="lado-direito-cabecalho">
+                <ul>
+                    <li><a href="abrigo.html">Abrigos</a></li>
+                    <li><a href="#">Onde Doar?</a></li>
+                    <li><a href="oquedoar.html">O que Doar?</a></li>
+                    <li><a href="formulario.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="form-container">
+          <div class="form">
+              <span class="heading">Entre em Contato</span>
+              <input placeholder="Name" type="text" class="input">
+              <input placeholder="Email" id="mail" type="email" class="input">
+              <textarea placeholder="Escreva Aqui" rows="10" cols="30" id="message" name="message" class="textarea"></textarea>
+              <div class="button-container">
+                  <div class="send-button">Enviar</div>
+                  <div class="reset-button-container">
+                      <div id="reset-btn" class="reset-button">Novamente?</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <footer>
+        <div class="iniciativa">
+            <h2 id="h2footer">Iniciativa: </h2><br><h2> SOS RS</h2>
         </div>
+        <div class="footer-section contact">
+            <h1 class="h1">Contato</h1>
+            <span><i class="fas fa-phone"></i> (51) 1234-5678</span><br>
+            <span><i class="fas fa-envelope"></i> informacoes123@sosrs.org</span>
+        </div>
+   
+    <div class="footer-bottom">
+        &copy; 2024 SOS RS | Todos os direitos reservados
+    </div>
+</footer>
+   
         </body>
         </html>
