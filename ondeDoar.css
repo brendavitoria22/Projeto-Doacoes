@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
@@ -108,64 +107,75 @@ input#search-bar {
     margin-left: 0px;
 }
 
-/*--------------parte do banner------------------------*/
+/*-----------------------------------------------------------*/
 
-.banner {
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    overflow: hidden;
+
+.card {
     position: relative;
-    text-align: center; /* Adiciona alinhamento central */
-    margin: 0 auto;
+    width: 350px;
+    height: 300px;
+    background: lightgrey;
+    box-shadow: #df0000ea 0 15px 40px -5px;
+    z-index: 1;
+    border-radius: 21px;
+    overflow: hidden;
+    margin-left: 100px; 
+    margin: 60px;
+  }
+  
+  .card__content {
+    background: linear-gradient(rgba(255, 255, 255, 0.473), rgba(185, 5, 5, 0.25));
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+  }
+  
+  .card .blob {
+    position: absolute;
+    z-index: -1;
+    border-radius: 5em;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .card .blob:nth-child(2) {
+    left: -20px;
+    top: -90px;
+    background: #b93912;
+  }
+  
+  .card .blob:nth-child(3) {
+    left: 160px;
+    top: -20px;
+    z-index: -1;
+    background: #eb4513e1;
+  }
+  
+  .card .blob:nth-child(4) {
+    left: -20px;
+    top: 100px;
+    background: #f86b298e;
+  }
+  
+  .card .blob:nth-child(5) {
+    left: 100px;
+    top: 180px;
+    background: #eea70dc0;
+  }
+  #cartoes-container {
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Quebre para a próxima linha quando necessário */
+    justify-content: center; /* Alinhe os cartões no centro horizontalmente */
+    gap: 20px; /* Espaçamento entre os cartões */
 }
 
-.slides {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    transition: transform 0.2s ease;
-    justify-content: center; 
-}
-
-.slides li {
-    flex: 0 0 auto;
-}
-
-.slides img {
-    width: 105%;
-    text-align: center;
-    height: auto;
-    border: 4px solid #e4e3e1; 
-    border-radius:40px; /* Adiciona cantos arredondados */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
-}
-.banner .slides li:not(.active) {
-    display: none;
-}
-.slide-indicators {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.slide-indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.slide-indicator.active {
-    background-color: #9e2a2b;
-}
-/*----------------------------------sobre nos-------------------------------*/
-
-
-.section div {
+  .section div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,9 +187,16 @@ input#search-bar {
 .section div h2 {
     margin-left: 10px; /* Adicionando margem para separar a imagem do texto */
 }
-
-
-
+.card > .card__content > p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.card > .card__content > h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
 
 .section {
     background-color: #9e2a2b;
@@ -188,7 +205,10 @@ input#search-bar {
     align-items: center;
     color: white;
     transition: transform 0.3s ease; /* Adicionando transição para a escala */
-    border-radius: 30px;
+    border-radius: 20px;
+    width: 40%;; /* Defina a largura máxima que deseja */
+    margin: 0 auto;
+    
   
 }
 
@@ -197,41 +217,43 @@ input#search-bar {
     transform: scale(0.95);
 }
 .section div img {
-    max-width: 200px; /* Definindo o tamanho máximo da imagem */
+    max-width: 100px; /* Definindo o tamanho máximo da imagem */
     height: auto; 
 }
 
 
-.sobre,
+.locais,
 .sobrenos {
     transition: transform 0.3s ease; /* Adicionando transição para a escala */
 }
 
-.sobre:hover,
-.sobrenos:hover {
+.locais:hover,
+.locaisab:hover {
     transform: scale(0.95);
 }
 
-.sobre {
+.locais {
     display: flex;
     width: 100%;
-    gap: 30px;
+    gap: 20px;
     padding: 0 80px 0 80px;
 }
 
 
  p {
-    font-size: 28px;
+    font-size: 29px;
     text-align: center;
     font-family: "Nunito", sans-serif;
     line-height: 1.5;
     margin: 20px 0;
 
+   
 }
   h2{
     font-size: 2.7em;
     font-family:'Libre Baskerville', serif; 
 }
+
 
 /*--------------footer------------------------*/
 footer {

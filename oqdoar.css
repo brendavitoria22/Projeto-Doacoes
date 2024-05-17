@@ -262,7 +262,9 @@ footer h2{
     font-family: 'Libre Baskerville', serif;
     margin-left: 100px;
 }
-/* Tema Claro */
+
+/*-------modo escuro--------*/
+
 body {
     background-color: #fff;
     color: #000;
