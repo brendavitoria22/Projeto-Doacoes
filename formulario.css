@@ -156,7 +156,8 @@ input#search-bar {
     border-left: 10px solid #9e2a2b;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
     text-align: center;
-    margin-left: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .heading {
