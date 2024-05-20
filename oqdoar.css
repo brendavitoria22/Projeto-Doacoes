@@ -161,7 +161,7 @@ h2{
 }
 
 .flip-card-front, .flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(221, 255, 26, 0.781);
+    box-shadow: 0 2px 2px 0 rgba(12, 12, 12, 0.781);
     display: flex;
     flex-direction: column;
     justify-content: center;
